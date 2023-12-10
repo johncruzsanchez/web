@@ -3,36 +3,39 @@ function mostrarContenidoSegunDispositivo() {
     // Verificar si el dispositivo es un móvil
     var esMovil = (typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1);
 
-    // Si es un móvil, mostrar el botón de descarga APK; de lo contrario, mostrar la imagen QR
+    // Crear un contenedor para el contenido
+    var contenedor = document.getElementById('contenidoDescarga');
+
+    // Limpiar el contenido existente en el contenedor
+    contenedor.innerHTML = '';
+
+    // Si es un móvil, mostrar un diseño específico para móviles; de lo contrario, mostrar otro diseño
     if (esMovil) {
-        mostrarBotonDescargaAPK();  // Cambiado a mostrarBotonDescarga para móviles
+        mostrarContenidoParaMovil(contenedor);  // Mostrar contenido específico para móviles
     } else {
-        mostrarImagenQR();  // Cambiado a mostrarImagenQR para PCs
+        mostrarContenidoParaPC(contenedor);  // Mostrar contenido específico para PCs
     }
 }
 
-// Función para mostrar el botón de descarga para APK
-function mostrarBotonDescargaAPK() {
-    // Crear un botón de descarga para APK
-    var botonDescargaAPK = document.createElement('a');
-    botonDescargaAPK.href = '';
-    botonDescargaAPK.innerHTML = 'Descargar APK';
-    botonDescargaAPK.setAttribute('download', 'RegistrAPP.apk');
+// Función para mostrar contenido específico para móviles
+function mostrarContenidoParaMovil(contenedor) {
+    // Crear un botón de descarga para móviles
+    var botonDescarga = document.createElement('a');
+    botonDescarga.href = 'https://github.com/';
+    botonDescarga.innerHTML = 'Descargar la aplicación para móviles';
+    botonDescarga.setAttribute('download', 'RegistrAPP.apk');
 
-    // Agregar el botón al cuerpo del documento
-    document.body.appendChild(botonDescargaAPK);
+    // Agregar el botón al contenedor
+    contenedor.appendChild(botonDescarga);
 }
 
-// Función para mostrar la imagen QR
-function mostrarImagenQR() {
-    // Obtener el elemento con el ID 'contenidoDescarga'
-    var contenidoDescarga = document.getElementById('contenidoDescarga');
-
-    // Crear una imagen QR
+// Función para mostrar contenido específico para PCs
+function mostrarContenidoParaPC(contenedor) {
+    // Crear una imagen QR para PCs
     var imagenQR = document.createElement('img');
     imagenQR.src = 'imagen-qr.png';
-    imagenQR.alt = 'Código QR para la descarga';
+    imagenQR.alt = 'Código QR para la descarga en PC';
 
-    // Agregar la imagen al contenido de descarga
-    contenidoDescarga.appendChild(imagenQR);
+    // Agregar la imagen al contenedor
+    contenedor.appendChild(imagenQR);
 }

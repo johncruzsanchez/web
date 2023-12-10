@@ -11,7 +11,7 @@
 
     <!-- Enlace al archivo de estilo local -->
     <link rel="stylesheet" href="style.css">
-        <img src="Logo.png" class="logo" alt="logo_duoc">
+    <img src="Logo.png" class="logo" alt="logo_duoc">
 </head>
 
 <body>
@@ -19,19 +19,24 @@
     <div class="container mt-5">
         <h1 class="text-center">Bienvenido a la página de RegistrAPP</h1>
         <p class="text-center">Espero que disfrutes la aplicación.</p>
-        <div id="contenidoDescarga" class="text-center">
-            
-            <script src="function.js"></script>
-            <script>mostrarContenidoSegunDispositivo();</script>
-        </div>
-    
-   
-</div>
+        <div id="contenidoDescarga" class="text-center"></div>
+    </div>
+
     <footer class="footer mt-5">
         <div class="container">
             <p>&copy; DuocUC 2023 RegistrAPP. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="function.js"></script>
+    <!-- Llamada a la función principal para mostrar contenido según el dispositivo -->
+    <script>
+        // Reemplaza esta línea con la llamada a la función principal después de cargar el contenido del DOM
+        document.addEventListener("DOMContentLoaded", function() {
+            mostrarContenidoSegunDispositivo();
+        });</script>
+
 </body>
 
 </html>

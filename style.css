@@ -1,0 +1,75 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Estilos para el título principal */
+h1 {
+    color: #007bff;
+}
+
+/* Estilos para el párrafo de bienvenida */
+p {
+    color: #6c757d;
+}
+
+/* Estilos para el contenedor de descarga */
+#contenidoDescarga {
+    margin-top: 20px;
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para el botón de descarga APK */
+a {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 20px auto; /* Alinea verticalmente y centra horizontalmente */
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 2px solid #0056b3;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la imagen QR */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    flex: 1;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #ebe846;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+.logo {
+    max-width: 200px; /* Ajusta el tamaño del logotipo según sea necesario */
+    margin-bottom: 20px;
+}

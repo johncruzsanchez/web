@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dispositivos - RegistrAPP</title>
 
-    <!-- Enlace a Bootstrap desde CDN (versión 5.3.0) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
     <!-- Enlace al archivo de estilo local -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Agrega estilos CSS adicionales según sea necesario */
+    </style>
+
     <img src="Logo.png" class="logo" alt="logo_duoc">
 </head>
 
@@ -18,25 +20,29 @@
 
     <div class="container mt-5">
         <h1 class="text-center">Bienvenido a la página de RegistrAPP</h1>
-        <p class="text-center">Espero que disfrutes la aplicación.</p>
-        <div id="contenidoDescarga" class="text-center"></div>
-    </div>
+        <h3 class="text-center">Espero que disfrutes la aplicación.</h3>
+        <p class="text-center">El obejtivo principal de esta aplicaion es la toma de asistencia para que sea mas rapida y eficiente </p>
 
+        <div id="contenidoDescarga" class="text-center"></div>
+    
+
+    <!-- Incluye el archivo de funciones -->
+    <script src="function.js"></script>
+
+    <!-- Llama a la función para mostrar contenido según el dispositivo -->
+    <script>
+        // Asegúrate de cambiar el nombre de la función según los cambios realizados en function.js
+        mostrarContenidoSegunDispositivo();
+    </script>
+</div>
+    
     <footer class="footer mt-5">
         <div class="container">
             <p>&copy; DuocUC 2023 RegistrAPP. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Enlace al archivo JavaScript externo -->
-    <script src="function.js"></script>
-    <!-- Llamada a la función principal para mostrar contenido según el dispositivo -->
-    <script>
-        // Reemplaza esta línea con la llamada a la función principal después de cargar el contenido del DOM
-        document.addEventListener("DOMContentLoaded", function() {
-            mostrarContenidoSegunDispositivo();
-        });</script>
-
+    
 </body>
 
 </html>
